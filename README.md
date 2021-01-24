@@ -1,2 +1,2 @@
-## •:°:• LeetCode •:°:•
-Problems Completed in Python and JavaScript
+## •:°:• LeetCode Problems •:°:•
+Completed in Python and JavaScript
