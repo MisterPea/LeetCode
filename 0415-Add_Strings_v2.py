@@ -10,32 +10,37 @@ class Solution(object):
         total = []
         num1_length = len(num1)
         num2_length = len(num2)
-        diff = abs(num1_length - num2_length)
         num1 = num1[::-1]
         num2 = num2[::-1]
-        
-        if num1_length > num2_length:
-            num2 += "0" * diff
-        elif num2_length > num1_length:
-            num1 += "0" * diff
 
         for i in range(0, max(num1_length,num2_length)):
-            current_int = int(num1[i]) + int(num2[i]) + carry
+            if i > num1_length - 1:
+                int1 = 0
+            else:
+                int1 = int(num1[i])
+            
+            if i > num2_length - 1:
+                int2 = 0
+            else:
+                int2 = int(num2[i])
+
+            current_int = int1 + int2 + carry
+
             carry = 0
+
             if current_int > 9:
                 carry = 1
                 current_int = current_int % 10
             total += [str(current_int)]
         if carry != 0:
             total += [str(carry)]
-        total.reverse()
-        return ''.join(total)
+        return ''.join(total)[::-1]
         
 		
 
 
-num1 = '6789'
-num2 = '123'
+num1 = '0'
+num2 = '999999'
 s = Solution()
 print(s.addStrings(num1, num2))
         
