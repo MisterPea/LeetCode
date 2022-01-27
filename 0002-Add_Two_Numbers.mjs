@@ -7,7 +7,7 @@
  */
 
 import parseLinkedList from "./parseLinkedList.mjs"
-import createLinkedList, { ListNode } from "./createLinkedList.mjs";
+import { createLinkedList, ListNode } from "./createLinkedList.mjs";
 
 const one = createLinkedList([2, 4, 3])
 const two = createLinkedList([5, 6, 4])

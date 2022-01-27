@@ -3,7 +3,7 @@ export function ListNode(val, next) {
   this.next = (next === undefined ? null : next)
 }
 
-export default function createLinkedList(linkedArray) {
+export function createLinkedList(linkedArray) {
   let head = null;
   let newHead = null;
 
